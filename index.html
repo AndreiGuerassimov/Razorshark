@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Razorfish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="js/data-transfer.js"></script>
+    <script src="js/contact-form.js"></script>
+</head>
+<body>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- DATA TRANSFER WIDGET -->
+        <div class="data-widget-container">
+            <div class="tabs-container">
+                <div class="tab active-tab">Diagram Stats</div>
+                <div class="tab disabled-tab">Month Report</div>
+            </div>
+
+            <!-- GRAPH -->
+            <div class="pie-container">
+                <div>DATA TRANSFER</div>
+                <div id="pie"></div>
+                <div class="pie-stats">
+                    <div id="files"></div>
+                    <div id="speed"></div>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="results-container">
+
+                <!-- AUDIO -->
+                <div class="result">
+                    <div class="results-seporator green"></div>
+                    <div>audio</div>
+                    <div id="result-audio"></div>
+                </div>
+
+                <!-- VIDEO -->
+                <div class="result">
+                    <div class="results-seporator red"></div>
+                    <div>video</div>
+                    <div id="result-video"></div>
+                </div>
+
+                <!-- PHOTO -->
+                <div class="result">
+                    <div class="results-seporator yellow"></div>
+                    <div>photo</div>
+                    <div id="result-photo"></div>
+                </div>
+            </div>
+
+            <!-- OPTIONS -->
+            <div class="options-container">
+
+                <!-- UPLOAD FILES -->
+                <div class="option">
+                    <div class="results-icon upload-icon"></div>
+                    <div>UPLOAD FILES</div>
+                </div>
+
+                <!-- SHARE LINK -->
+                <div class="option">
+                    <div class="results-icon share-icon"></div>
+                    <div>SHARE LINK</div>
+                </div>
+
+                <!-- BACK UP -->
+                <div class="option">
+                    <div class="results-icon backup-icon"></div>
+                    <div>BACK UP</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- DATA TRANSFER WIDGET -->
+        <div class="contact-top"></div>
+        <div class="contact-widget-container">
+
+            <form class="contact-form">
+
+                <span id="message-sent">Thank you! Your message was sent.</span>
+
+                <!-- CONTACTS -->
+                <div class="form-group">
+                    <label>Contacts</label>
+                    <div class="contacts-container">
+                        <div id="add-contact"></div>
+                        <div id="confirm-contact">Add</div>
+                        <input type="text" placeholder="Enter an email address" id="form-field-contact">
+                    </div>
+                </div>
+                <span class="field-invalid" id="contact-invalid">Please add a contact</span>
+                <span class="field-invalid" id="email-invalid">Please enter a valid email address</span>
+
+                <!-- SUBJECT -->
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="You can add a subject" id="form-field-subject">
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Leave your message here" id="form-field-message" maxlength="500"></textarea>
+                </div>
+                <span class="field-invalid" id="message-invalid">Message must be at least 50 characters long</span>
+
+            </form>
+
+            <!-- SEND MENU -->
+            <div class="send-menu-container">
+
+                <!-- SAVE COPY CHECKBOX -->
+                <div class="send-menu-group">
+                    <input type="checkbox" id="save-copy-check">
+                    <label>Save a copy</label>
+                </div>
+
+                <!-- SEND BUTTON -->
+                <div class="send-menu-group">
+                    <div id="send-button">
+                        <div></div>
+                        <span>Send Mail</span>
+                    </div>
+                </div>
+                <div class="contact-belt"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
